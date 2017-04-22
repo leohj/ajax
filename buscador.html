@@ -9,18 +9,27 @@
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
 	-->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<div class="container">		
-		<form>
-			<input id="nombres" type="text">Busca a tu hero
-			</input>
-		</form>
+		<div class="ui-widget">
+			<form action="im.js">
+				<label for="tags">Heroes: </label>
+				<input id="tags" placeholder="nombre">
+				<input type="submit" value="Submit">
+			</form>
+				
+		</div>
+		<div class="box2">
+		</div>
+
 		
 	</div>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 	<script src="test.js"></script>
+	<script src="im.js"></script>
 </body>
 </html>

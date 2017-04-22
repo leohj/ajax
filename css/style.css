@@ -30,4 +30,9 @@ body {
       font-weight: bold;
       color: white; }
 
+.box2 {
+  width: 50%;
+  background: red;
+  height: 200px; }
+
 /*# sourceMappingURL=style.css.map */

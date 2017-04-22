@@ -20,7 +20,7 @@ $.getJSON("heroes.json",function(data){
 	for(var i = 0 ; i<data.heroes.length ; i++){
 		lista.push( data.heroes[i].localized_name )
 	};
-	$( "#nombres" ).autocomplete({
+	$( "#tags" ).autocomplete({
       source: lista
     });
 
