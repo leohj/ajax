@@ -4,8 +4,8 @@ $.getJSON("heroes.json",function(data){
 		var urlimage="img/"+ b.name+"_hphover.png"
 		var content="";
 		content+="<div class=\"profile\">";
-		content+="	<img src="+urlimage+">";
-		content+="	<span>"+b.localized_name+"</span>";
+		content+=	"<img src="+urlimage+">";
+		content+=	"<span>"+b.localized_name+"</span>";
 		content+="</div>"
 		$( "#demo" ).append(content);
 
@@ -16,5 +16,12 @@ $.getJSON("heroes.json",function(data){
 		console.log(b.localized_name);
 	*/
 	});
+	var lista=[];
+	for(var i = 0 ; i<data.heroes.length ; i++){
+		lista.push( data.heroes[i].localized_name )
+	};
+	$( "#nombres" ).autocomplete({
+      source: lista
+    });
 
 });
