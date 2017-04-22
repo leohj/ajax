@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+$width : 1150px;
+$height : 2633px;
+$fondo: #f2f2f2;
+$verde: #C2D472;
+$turquesa: #8ECEC7;
+$cglobal: #7d7c7c;
+@mixin clear-fix {	
+	&:after{
+		display:table;
+		content:"";
+		clear:both;
+	}
+}
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+body{
+	margin: 0;
+	background-color: $fondo;
+	font-family: 'Source Sans Pro', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*{	box-sizing: border-box;
+	color: $cglobal;
+}
+
+.container{
+	max-width:$width;
+	margin: 0 auto;
+}
+.box{
+	position: relative;
+	width: 100%;
+	background: black;
+	text-align:center;
+	.profile{
+		position: relative;
+		display: inline-block;
+		span{
+			z-index: 1;
+			position:absolute;
+			left: 0px;
+			bottom: 0px;
+			font-weight: bold;
+			color: white;
+
+		}
+	}
+}
