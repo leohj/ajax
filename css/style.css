@@ -18,21 +18,19 @@ body {
   position: relative;
   width: 100%;
   background: black;
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
   .box .profile {
+    cursor: pointer;
     position: relative;
-    display: inline-block; }
+    display: inline-block;
+    z-index: 2; }
     .box .profile span {
-      z-index: 1;
+      z-index: 3;
       position: absolute;
       left: 0px;
       bottom: 0px;
       font-weight: bold;
       color: white; }
-
-.box2 {
-  width: 50%;
-  background: red;
-  height: 200px; }
 
 /*# sourceMappingURL=style.css.map */

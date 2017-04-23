@@ -41,11 +41,14 @@ body{
 	width: 100%;
 	background: black;
 	text-align:center;
+	z-index: 1;
 	.profile{
+		cursor: pointer;
 		position: relative;
 		display: inline-block;
+		z-index: 2;
 		span{
-			z-index: 1;
+			z-index: 3;
 			position:absolute;
 			left: 0px;
 			bottom: 0px;
@@ -55,12 +58,3 @@ body{
 		}
 	}
 }
-.box2{
-	width: 50%;
-	background: red;
-	height: 200px;
-}
-
-
-
-

@@ -16,12 +16,38 @@ $.getJSON("heroes.json",function(data){
 		console.log(b.localized_name);
 	*/
 	});
+	//AUTOCOMPLETAR
 	var lista=[];
 	for(var i = 0 ; i<data.heroes.length ; i++){
-		lista.push( data.heroes[i].localized_name )
+		var obj = new Object();
+		obj.value = data.heroes[i].localized_name;
+		obj.ubicacion = data.heroes[i].name;
+		lista.push(obj);
 	};
-	$( "#tags" ).autocomplete({
-      source: lista
-    });
 
+	$(document).ready(function(){
+		$( "#tags" ).autocomplete({
+		source: lista,
+		select: function( event, ui ) {
+				var urlimage="img/"+ ui.item.ubicacion +"_hphover.png";
+				var content="";
+				content+="<div class=\"profile\">";
+				content+=	"<img src="+urlimage+">";
+				content+=	"<span>"+ui.item.value+"</span>";
+				content+="</div>";
+				$(content)
+					.hide()
+					.appendTo("#imagenes")
+					.show("slow");
+				$(this).val("");
+				return false;
+
+			}
+		});
+	});
+});
+$( "#imagenes" ).on("click",".profile" ,function() {
+	$(this).hide("slow",function(){
+		$(this).remove();
+	});
 });
